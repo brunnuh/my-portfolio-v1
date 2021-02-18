@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+*, button, input {
+    border: 0;
+    outline: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root{
+    --primary: #1c2321;
+    --secondary: #7d98a1;
+    --tertiary: #5e6572;
+    --quaternary: #a9b4c2;
+    --quinary: #eef1ef;
+
+
+    --sv: #652c8f;
+    --sv2: #402039;
+}
