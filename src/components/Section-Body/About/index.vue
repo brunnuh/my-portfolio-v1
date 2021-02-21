@@ -1,12 +1,14 @@
 <template>
   <div class="container-about">
       <div class="image">
-
+          
       </div>
       <div class="about-content">
             <h2>Um pouco sobre mim ...</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consequatur labore cum molestiae <scan>adipisicing </scan>, facilis aliquid iure illo debitis excepturi recusandae sequi in quaerat illum repudiandae perspiciatis suscipit! Ab, quibusdam.
-                Lorem ipsum, dolor sit amet consectetur <scan>adipisicing </scan> elit. Dolorem ullam fugiat, tempore veritatis sapiente temporibus repudiandae velit sit architecto aliquam in. Hic ipsum dolorum, explicabo natus adipisci quae commodi perspiciatis.</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consequatur labore cum molestiae  facilis aliquid iure illo debitis excepturi recusandae sequi in quaerat illum repudiandae perspiciatis suscipit! Ab, quibusdam.
+                
+            </p>
       </div>
   </div>
 </template>
@@ -21,11 +23,9 @@ export default {
     .container-about{
         display: flex;
         flex-direction: row;
-        
         justify-content: space-between;
         margin-top: 50px;
-        //height: 200px;
-        //padding: 20px;
+       
 
         .image{
             height: 300px;
@@ -39,7 +39,7 @@ export default {
             max-width: 60%;
             display: flex;
             flex-direction: column;
-            //align-items: center;
+         
             height: 300px;
             margin: 30px 100px;
             h2{

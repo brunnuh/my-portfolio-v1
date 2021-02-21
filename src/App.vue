@@ -24,7 +24,7 @@ export default {
 <style lang="scss" scoped>
   #app{
     display: grid;
-    grid-template-rows: 400px auto 200px;
+    grid-template-rows: 100vh auto 200px;
     grid-template-areas: 'HD' 'BD' 'FT';
   }
 </style>
