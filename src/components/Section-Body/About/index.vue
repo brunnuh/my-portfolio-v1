@@ -1,61 +1,83 @@
 <template>
   <div class="container-about">
-      <div class="image">
-          
-      </div>
-      <div class="about-content">
-            <h2>Um pouco sobre mim ...</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consequatur labore cum molestiae  facilis aliquid iure illo debitis excepturi recusandae sequi in quaerat illum repudiandae perspiciatis suscipit! Ab, quibusdam.
-                
-            </p>
-      </div>
+        <div class="image">
+            <img src="@/assets/img_vender.png" alt="">
+        </div>
+        <div class="about-content">
+            <h2>ABOUT ME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni iste est delectus. Tenetur dolore culpa veritatis ducimus? At doloribus accusamus soluta facere ab? Necessitatibus pariatur eligendi blanditiis facere, veritatis voluptatibus.</p>
+            <p>Lorem ipsum dolor sit amet <span>consectetur</span>, adipisicing elit. Minima, neque! Sit, pariatur? Facere nobis aspernatur eius velit dolore officia, est exercitationem iste in, perspiciatis dolorum ratione cumque iusto. Laudantium, natus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur <span>adipisicing</span> elit. Minus nihil excepturi voluptatibus? Numquam, vero perferendis. Libero labore atque illum voluptate? Quibusdam quidem amet delectus optio! Natus libero magni deserunt dolore?</p>
+        </div>
   </div>
 </template>
 
 <script>
-export default {
 
+
+export default {
+   
 }
 </script>
 
 <style scoped lang="scss">
     .container-about{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 50px;
-       
-
+        align-items: center;
+        height: 100%;
+        width: 100%;
         .image{
-            height: 300px;
-            width: 350px;
-            border-radius: 50%;
-            margin-left: 50px;
-            background-color: rgb(22, 35, 65);
+            display: flex;
+            justify-content: center;
+            //margin-top: 100px;
+            height: 100%;
+            width: 50%;
+            //background-color: rgb(248, 245, 245);
+            img{ // efeito paralax
+                height: 100%;
+                //perspective: 2px;
+                //transform-style: preserve-3d;
+            }
         }
+
 
         .about-content{
-            max-width: 60%;
+         
             display: flex;
             flex-direction: column;
-         
-            height: 300px;
-            margin: 30px 100px;
+            justify-content: center;
+            align-items: center;
+            height: 40vw;
+            width: 80%;
+            //background-color: var(--secondary);
+
+            
+
+
+
+
+            h2,p{
+                padding: 0 300px;
+            }
+
             h2{
-                font-size: 65px;
-                color: var(--secondary);     
+                font-size: 7.5vh;
+                color: var(--sv);
+                margin-bottom: 40px;
             }
             p{
-                margin-top: 30px;
-                line-height: 35px;
-                font-weight: 100;
-                font-size: 20px;
-                scan{
+                align-items: flex-start;
+                margin-bottom: 20px;
+                color: var(--primary);
+                font-weight: 300;
+                font-size: 2vh;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                span{
+                    font-weight: 900;
                     color: var(--sv);
-                    font-weight: bold;
                 }
-            } 
+            }
         }
+        
     }
 </style>

@@ -12,7 +12,7 @@ export default {
 
 <style scoped lang="scss">
     .container{
-        background-color: var(--sv);
+        background-color: blue;
         grid-area: FT;
     }
 </style>

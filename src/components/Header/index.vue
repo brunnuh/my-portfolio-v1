@@ -1,6 +1,8 @@
 <template>
     <header class="container">
-        <div class="top">
+        <div :class="[fixed ? 'spacing' : '']"></div>
+        <div class="nav-bar" :class="[this.fixed ? 'fixedMain' : 'nav-bar-after']" v-scroll="menuFixed">
+            
             <div class="logo">
                 <a href=""><img src="@/assets/logo.png"  alt="logo"></a>
             </div>
@@ -14,7 +16,7 @@
             </nav>
         </div>
 
-        <div class="about-me">
+        <div class="about-me" >
             <h2>
                 <p>Lorem ipsum</p> dolor sit amet consectetur, <p>adipisicing</p> elit. Deserunt fugiat unde  magnam officia <p>tempore</p> Voluptatem .
             </h2>
@@ -22,6 +24,28 @@
     </header>
 </template>
 
+<script>
+export default {
+    data() {
+        return {
+            fixed: false,
+            positionNow: 0
+        }
+    },
+    methods: {
+        menuFixed: function(){
+            //console.log("posicao atualizada descendo: ", this.positionNow, "posicaoY: ", window.scrollY)
+            if(window.scrollY > 950){
+                this.positionNow = window.scrollY
+                this.fixed = true 
+            }else if( window.scrollY < 100){
+                this.fixed = false
+            }
+            
+        }
+    },
+}
+</script>
 
 
 <style scoped lang="scss">
@@ -30,21 +54,39 @@
         grid-area: HD;
         display: flex;
         flex-direction: column;
+        
         color: var(--quinary);
         
-        .top{
+        .fixedMain{
+            position: fixed;
+            background-color: var(--primary);
+            opacity: 0.9;
+            width: 100%;
+            z-index: 101;
+            animation-name: suavizar;
+            animation-duration: 0.5s;
+            
+            //transition: transform 1s;
+        }
+
+        .spacing{
+            height: 94px;
+        }
+        
+        .nav-bar{
+            
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             padding-top: 20px; 
-
+            
             .logo > a > img{
                 width: 300px;
             }
 
             nav > ul {
                 display: flex;
-                margin-top: 30px;
+                margin-top: 15px;
             }
 
             nav > ul > li{
@@ -56,13 +98,11 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 15px;
-                transition:0.4s;
+                transition: 0.4s;
                 
                
                 &:hover{
                     cursor: pointer;
-                  
-                    //background: var(--sv);
                     a{
                         color: var(--sv);
                     }
@@ -76,21 +116,35 @@
             }
         }
         .about-me{
+            
             display: flex;
             align-self: center;
             max-width: 65%;
             margin-top: 10vw;
+            
             h2{
                 font-size: 7.5vh;
                 color: var(--quaternary);
                 p{
                     display: inline;
                     background: -webkit-linear-gradient(right, var(--sv), var(--sv2));
-                    -webkit-background-clip: text;
+                    background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }
             }
-        }
-        
+        }        
     }
+
+    @keyframes suavizar {
+        from{
+            transform: translate(0%, -100%) matrix(1, 0, 0, 1, 0, 0) ;
+        }
+
+        to{
+            transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0) !important;
+        }
+    }
+
+    
+    
 </style>
