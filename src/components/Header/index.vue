@@ -35,7 +35,7 @@ export default {
     methods: {
         menuFixed: function(){
             //console.log("posicao atualizada descendo: ", this.positionNow, "posicaoY: ", window.scrollY)
-            if(window.scrollY > 950){
+            if(window.scrollY > 50){
                 this.positionNow = window.scrollY
                 this.fixed = true 
             }else if( window.scrollY < 100){
@@ -61,7 +61,7 @@ export default {
         .fixedMain{
             position: fixed;
             background-color: var(--primary);
-            opacity: 0.9;
+            opacity: 0.7;
             width: 100%;
             z-index: 101;
             animation-name: suavizar;

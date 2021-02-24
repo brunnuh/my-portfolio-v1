@@ -6,7 +6,7 @@
         <div class="front-skills center-title">
             <h3>Front-End</h3>
             <CircleComponent title="HTML5" :porcent="70"/>
-            <CircleComponent title="CSS3" :porcent="50"/>
+            <CircleComponent title="CSS3" :porcent="40"/>
         </div>
         <div class="back-skills center-title">
             <h3>Back-End</h3>

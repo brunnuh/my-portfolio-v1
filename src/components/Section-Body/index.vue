@@ -20,7 +20,7 @@ export default {
     .container-section{
         grid-area: BD;
         display: flex;
-        height: 70vwquinary;
+        //height: 70vwquinary;
         flex-direction: column;
         //align-items: center;
         //background-color: var(--sv);
