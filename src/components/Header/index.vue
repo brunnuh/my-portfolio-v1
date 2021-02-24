@@ -56,6 +56,7 @@ export default {
         flex-direction: column;
         
         color: var(--quinary);
+       
         
         .fixedMain{
             position: fixed;
@@ -119,11 +120,12 @@ export default {
             
             display: flex;
             align-self: center;
+            justify-content: center;
             max-width: 65%;
             margin-top: 10vw;
             
             h2{
-                font-size: 7.5vh;
+                font-size: 4.5vw;
                 color: var(--quaternary);
                 p{
                     display: inline;
